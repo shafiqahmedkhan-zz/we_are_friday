@@ -12,5 +12,11 @@ Then(/^I should be able to browse gyms by regions in the UK$/) do
   @gymhomepage = PageObjects::GymHomePage.new
   @gymhomepage.find_your_local_gym.regions.first.click
   puts @gymhomepage.find_your_local_gym.first_gym_location
-  expect(@gymhomepage.find_your_local_gym).to have(@gymhomepage.find_your_local_gym.first_gym_location)
+  expect(@gymhomepage.find_your_local_gym.first_gym_location).to be
+end
+
+And(/^I search for gyms near my home$/) do
+  @gymhomepage = PageObjects::GymHomePage.new
+  @gymhomepage.find_your_local_gym.search_postcode 'RM82SJ'
+  sleep(10)
 end
