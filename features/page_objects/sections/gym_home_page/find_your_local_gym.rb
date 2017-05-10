@@ -13,7 +13,7 @@ module PageObjects
 
         def search_postcode postcode
           postcode_search.set postcode
-          postcode_search.send_keys :return
+          postcode_search.native.send_key(:return)
         end
 
       end

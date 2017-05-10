@@ -1,4 +1,4 @@
-Feature: Searching for a gym
+Feature: Searching for a gym for the first time
   As a prospective Nuffield gym customer
   I want to find the gyms nearest to my home
   In order to decide which gym to join
@@ -14,8 +14,3 @@ Feature: Searching for a gym
     When I view the list of Nuffield gyms
     And I search for gyms near my home
     Then I should see a list of gyms near me
-
-  #Scenario: Save user's location for future visits
-  #  Given I am a repeat visitor
-  #  When I view the list of Nuffield gyms
-  #  Then I should see a list of gyms near me
